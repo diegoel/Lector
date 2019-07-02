@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage Title="Barcode Demo" 
+             xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:Lector" 
+             xmlns:viewmodels="clr-namespace:Lector.ViewModels;assembly=Lector"
+             x:Class="Lector.MainPage">
+    <ContentPage.BindingContext>
+        <viewmodels:MainPageViewModel />
+    </ContentPage.BindingContext>
+    <StackLayout Padding="10">
+        <!-- Place new controls here -->
+        <Button Command="{Binding ButtonCommand}" 
+                HorizontalOptions="Fill" 
+                VerticalOptions="EndAndExpand" 
+                BackgroundColor="Teal" 
+                TextColor="Red" 
+                FontSize="Large" 
+                Text="Open scanner" 
+                BorderRadius="30"/>
+        <Label Text="{Binding Result}" HorizontalOptions="Center" VerticalOptions="StartAndExpand" />
+    </StackLayout>
+</ContentPage>
